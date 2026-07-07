@@ -17,7 +17,12 @@
                 high=mid-1
 
         return -1 ] LeetCode 704 - Binary Search
-- [class Solution:
+- [
+- 
+- 
+- 
+- 
+- class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         low,high=0,len(nums)-1
 
