@@ -9,14 +9,16 @@
 - Search Insert Position
 - Count Occurrences
 - Find First and Last Position
-
+- First Occurrence
+- Last Ocuurrence
 ## Algorithms Implemented
 
 - Lower Bound
 - Upper Bound
 - Count Occurrences
 - Search Insert Position
-
+- First Occurrence
+- Last Ocuurrence
 ## LeetCode Problems
 
 - 34 - Find First and Last Position of Element in Sorted Array ✅
