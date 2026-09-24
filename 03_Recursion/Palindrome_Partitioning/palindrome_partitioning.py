@@ -16,9 +16,8 @@ class Solution:
                 substring=s[index:i+1]
 
                 if substring==substring[::-1]:
-
                     current.append(substring)
-                    backtrack(i+1)
+                    backtrack(index+1)
 
                     current.pop()
 
