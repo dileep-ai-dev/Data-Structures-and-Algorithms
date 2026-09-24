@@ -1,124 +1,44 @@
 # Problems Solved 
 
-## 1. General Combination Generation
+## LeetCode 39 — Combination Sum
 
 ### Problem
+Given an array of distinct integers `candidates` and a target integer `target`, return all unique combinations of candidates where the chosen numbers sum to target.
 
-Generate all possible combinations of exactly `k` elements from a given array.
-
-### Example
-
-```text
-nums = [1,2,3,4,5]
-k = 3
-```
-
-Output:
-
-```text
-[1,2,3]
-[1,2,4]
-[1,2,5]
-[1,3,4]
-[1,3,5]
-[1,4,5]
-[2,3,4]
-[2,3,5]
-[2,4,5]
-[3,4,5]
-```
+The same number may be chosen an unlimited number of times.
 
 ### Approach
 
-Used recursive backtracking with the Include / Exclude technique.
+Used recursive backtracking with an index.
 
-For every element, there are two choices:
+### Main Idea
 
-1. Include the element.
-2. Exclude the element.
+- Include the current candidate.
+- Keep the same index because the candidate can be reused.
+- Backtrack using `pop()`.
+- Exclude the current candidate.
+- Move to the next index.
 
-When an element is selected, recursion moves to `index + 1`.
+### Base Cases
 
-### Backtracking Logic
+If `remaining == 0`:
 
-```text
-Choose
-   ↓
-Explore
-   ↓
-Undo
-   ↓
-Explore without choosing
-```
+A valid combination is found.
 
-### Important Point
+If `remaining < 0`:
 
-`index + 1` is used because each element can be selected only once.
+The current combination is invalid.
 
-Moving forward also prevents generating duplicate orderings such as:
+If `index >= len(candidates)`:
 
-```text
-[1,2]
-[2,1]
-```
-
-Both represent the same combination.
-
-### Base Condition
-
-When:
-
-```text
-len(current) == k
-```
-
-the current combination is complete and is stored in the result.
+No candidates are left.
 
 ### Complexity
 
-```text
-Time: O(2^n + k × C(n,k))
-Space: O(n + k × C(n,k))
-Auxiliary Space: O(n)
-```
+The solution has exponential backtracking behavior in the worst case.
+
+Space is used for the recursion stack and the combinations stored in the result.
 
 ### Status
 
-Implemented independently ✅
-
----
-
-## 2. LeetCode 39 — Combination Sum
-
-### Status
-
-Previously solved and pushed to GitHub.
-
-### Key Concept
-
-Combination Sum uses backtracking to find combinations whose sum equals the target.
-
-The same candidate can be used multiple times.
-
-Therefore:
-
-```text
-Include → same index
-Exclude → index + 1
-```
-
-### Important Difference
-
-General combinations:
-
-```text
-Include → index + 1
-```
-
-Combination Sum:
-
-```text
-Include → same index
-```
-
-
+Solved independently.
