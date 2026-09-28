@@ -17,8 +17,8 @@ class Solution:
                     return False
 
             # Find the starting position of the 3x3 box
-            start_row = (row // 3) * 3
-            start_col = (col // 3) * 3
+            start_row=(row//3)*3
+            start_col=(col//3)*3
 
             # Check 3x3 box
             for i in range(start_row, start_row + 3):
