@@ -87,7 +87,7 @@ Auxiliary recursion space:
 
 The board is modified in-place.
 
-## Result
+## Resul
 
 Implemented independently using recursion and backtracking.
 
